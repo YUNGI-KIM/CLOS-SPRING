@@ -41,8 +41,8 @@ public class StudentService {
     public void deleteStudent(Long id) {
         studentRepository.deleteById(id);
     }
-    public Student getStudenttByUsernameAndSchoolCode(String username, String school_code) {
-        return studentRepository.findByUsernameAndSchoolCode(username, school_code);
+    public Student getStudentByUsernameAndSchool_code(String username, int school_code) {
+        return studentRepository.findByUsernameAndSchool_code(username, school_code);
     }
 
 }

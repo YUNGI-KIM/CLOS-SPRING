@@ -24,9 +24,8 @@ public class StudentController {
         return studentService.getStudent(id);
     }
     @GetMapping("/search")
-    public Student getStudentByUsernameAndSchool_code(@RequestParam String username, @RequestParam String school_code) {
-        int school_code_search = Integer.parseInt(school_code);
-        return studentService.getStudentByUsernameAndSchool_code(username, school_code_search);
+    public Student getStudentByUsernameAndSchool_code(@RequestParam String username, @RequestParam int SchoolCode) {
+        return studentService.getStudentByUsernameAndSchoolCode(username, SchoolCode);
     }
 
     @PutMapping("/{id}")

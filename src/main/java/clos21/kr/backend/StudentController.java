@@ -27,6 +27,10 @@ public class StudentController {
     public Student getStudentByUsernameAndSchool_code(@RequestParam String username, @RequestParam int SchoolCode) {
         return studentService.getStudentByUsernameAndSchoolCode(username, SchoolCode);
     }
+    @GetMapping("/")
+    public String m() {
+        return "Check";
+    }
 
     @PutMapping("/{id}")
     public Student updateStudent(@PathVariable Long id, @RequestBody Student student) {

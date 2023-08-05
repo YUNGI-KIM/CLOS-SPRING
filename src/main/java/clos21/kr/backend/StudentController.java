@@ -19,9 +19,13 @@ public class StudentController {
         return studentService.saveStudent(student);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("id/{id}")
     public Student getStudent(@PathVariable Long id) {
         return studentService.getStudent(id);
+    }
+    @GetMapping("/search")
+    public Student getStudentByUsernameAndSchoolCode(@RequestParam String username, @RequestParam String school_code) {
+        return studentService.getStudenttByUsernameAndSchoolCode(username, school_code);
     }
 
     @PutMapping("/{id}")

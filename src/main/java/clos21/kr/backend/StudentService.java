@@ -31,7 +31,7 @@ public class StudentService {
             return studentRepository.save(existingStudent);
         }
 
-        return null; // 해당 username의 학생을 찾지 못한 경우
+        return null;
     }
 
     public Student updateStudent(Student student) {

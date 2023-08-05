@@ -26,7 +26,7 @@ public class Student {
     @Column(nullable = true)
     private String phone;
     @Column(nullable = false)
-    private int school_code = 0;
+    private int schoolCode = 0;
 
     // Getters
     public Long getId() {
